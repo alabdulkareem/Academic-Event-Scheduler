@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  lecture_title: MyString
+  description: MyString
+  email: MyString
+  nb_of_times: 1
+  duration: 9.99
+  link_1: MyString
+  link_2: MyString
+
+two:
+  type: 
+  lecture_title: MyString
+  description: MyString
+  email: MyString
+  nb_of_times: 1
+  duration: 9.99
+  link_1: MyString
+  link_2: MyString

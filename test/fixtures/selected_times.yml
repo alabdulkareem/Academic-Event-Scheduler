@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  event: one
+  from_date: 2016-12-16
+  to_date: 2016-12-16
+  from_time: 2016-12-16 00:33:56
+  to_time: 2016-12-16 00:33:56
+  cell_status: false
+
+two:
+  student: two
+  event: two
+  from_date: 2016-12-16
+  to_date: 2016-12-16
+  from_time: 2016-12-16 00:33:56
+  to_time: 2016-12-16 00:33:56
+  cell_status: false

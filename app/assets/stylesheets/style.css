@@ -1,0 +1,25 @@
+.landing-page-button
+{
+	text-decoration: none;
+    background-color: #00ccff;
+    color: white;
+    height: 125px;
+    width: 200px;
+    margin-left: 20%;
+    margin-top: 10%;
+    margin-bottom: 13%;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-bottom: 0px;
+    padding-top: 46px;
+    padding-left: 30px;
+    display: inline-block;
+	
+}
+
+.landing-page-button:hover
+{
+	text-decoration: none;
+	background-color: orange;
+	color: blue;
+}

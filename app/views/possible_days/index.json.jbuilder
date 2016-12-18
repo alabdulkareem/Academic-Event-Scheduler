@@ -1,0 +1,1 @@
+json.array! @possible_days, partial: 'possible_days/possible_day', as: :possible_day

@@ -1,0 +1,1 @@
+json.partial! "selected_times/selected_time", selected_time: @selected_time

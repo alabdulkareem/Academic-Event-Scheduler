@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @selected_time.student %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @selected_time.event %>
+</p>
+
+<p>
+  <strong>From date:</strong>
+  <%= @selected_time.from_date %>
+</p>
+
+<p>
+  <strong>To date:</strong>
+  <%= @selected_time.to_date %>
+</p>
+
+<p>
+  <strong>From time:</strong>
+  <%= @selected_time.from_time %>
+</p>
+
+<p>
+  <strong>To time:</strong>
+  <%= @selected_time.to_time %>
+</p>
+
+<p>
+  <strong>Cell status:</strong>
+  <%= @selected_time.cell_status %>
+</p>
+
+<%= link_to 'Edit', edit_selected_time_path(@selected_time) %> |
+<%= link_to 'Back', selected_times_path %>

@@ -1,0 +1,1 @@
+json.array! @selected_times, partial: 'selected_times/selected_time', as: :selected_time

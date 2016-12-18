@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @event.type %>
+</p>
+
+<p>
+  <strong>Lecture title:</strong>
+  <%= @event.lecture_title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @event.email %>
+</p>
+
+<p>
+  <strong>Nb of times:</strong>
+  <%= @event.nb_of_times %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @event.duration %>
+</p>
+
+<p>
+  <strong>Link 1:</strong>
+  <%= @event.link_1 %>
+</p>
+
+<p>
+  <strong>Link 2:</strong>
+  <%= @event.link_2 %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

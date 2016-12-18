@@ -1,0 +1,70 @@
+<%= form_for(event) do |f| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h3 style="padding-left: 3%;"> Schedule <%= @name %> </h3> 
+
+  <div class="field" style="padding-left: 3%;">
+    <%= f.label :event_title %>
+    <%= f.text_field :lecture_title %>
+  </div>
+
+  <div class="field" style="padding-left: 3%;">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field" style="padding-left: 3%;">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field" style="padding-left: 3%;">
+    <%= f.label :number_of_times_per_week %>
+    <%= f.select :nb_of_times, options_for_select(['1', '2','3','4','5','6','7']), {} %>
+  </div>
+
+  <div class="field" style="padding-left: 3%;">
+    <%= f.label :duration %>
+    <%= f.select :nb_of_times, options_for_select(['1:00', '1:30','2:00','2:30','3:00','3:30','4:00']), {} %>
+     Hours
+  </div>
+  
+  <%= f.nested_fields_for :possible_days do |ff| %>
+    <%= render partial: 'events/partials/days', locals: {ff: ff} %>
+  <% end %>
+  <div class="field" style="padding-left: 3%;">
+    <%= f.add_nested_fields_link :possible_days  %>
+  </div>
+
+  <div class="actions" style="padding-left: 3%;">
+    <%= f.submit "Next" %>
+  </div>
+<% end %>
+
+
+<script>
+
+  $(document).ready(function(){
+    $(document).on('change','#event_nb_of_times',function(){
+    var startDate = $('#event_nb_of_times').val();
+    var i=0;
+    for(i=0;i<startDate;i++)
+    {
+      $('.add_nested_fields_link').click();
+    }
+
+    });
+    
+  });
+
+</script>
+  

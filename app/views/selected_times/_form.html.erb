@@ -1,0 +1,52 @@
+<%= form_for(selected_time) do |f| %>
+  <% if selected_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(selected_time.errors.count, "error") %> prohibited this selected_time from being saved:</h2>
+
+      <ul>
+      <% selected_time.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %>
+    <%= f.text_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_id %>
+    <%= f.text_field :event_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_date %>
+    <%= f.date_select :from_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_date %>
+    <%= f.date_select :to_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_time %>
+    <%= f.datetime_select :from_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_time %>
+    <%= f.datetime_select :to_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cell_status %>
+    <%= f.check_box :cell_status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<%= form_for(possible_day) do |f| %>
+  <% if possible_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(possible_day.errors.count, "error") %> prohibited this possible_day from being saved:</h2>
+
+      <ul>
+      <% possible_day.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_date %>
+    <%= f.date_select :from_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_date %>
+    <%= f.date_select :to_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from_time %>
+    <%= f.datetime_select :from_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to_time %>
+    <%= f.datetime_select :to_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_id %>
+    <%= f.text_field :event_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
