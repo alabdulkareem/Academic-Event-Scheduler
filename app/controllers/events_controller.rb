@@ -17,7 +17,7 @@ class EventsController < ApplicationController
     @name = params[:name];
     @event = Event.new
     @event.possible_days.build
-    byebug
+    
   end
 
   # GET /events/1/edit
@@ -28,7 +28,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-    byebug
+    
     render :timetable
     # respond_to do |format|
     #   if @event.save
